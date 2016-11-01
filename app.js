@@ -8,6 +8,7 @@ var express = require('express'),
     multer  = require('multer'),
     home = require('./lib/home.js');
 
+
 var storage = multer.diskStorage({
     filename: function (req, file, cb) {
         cb(null, Date.now() + file.originalname);
@@ -20,6 +21,8 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser());
 app.use(multer({storage:storage}).single('file'));
+app.use(express.static('uploads'));
+app.use(express.static('public'));
 
 app.get('/', function (req, res) {
     if (req.cookies && req.cookies.email) {
@@ -68,6 +71,10 @@ app.post('/upload', function(req, res) {
 
 app.get('/download/:file', function(req, res) {
     file.download(req, res);
+});
+
+app.get('/view/:file', function(req, res) {
+    file.view(req, res);
 });
 
 app.get('/delete/:file', function(req, res) {
