@@ -1,0 +1,26 @@
+.thumbnail-image {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.center {
+    width: 80%;
+    margin: auto;
+}
+
+.banner {
+    display: block;
+    margin: auto;
+}
+
+.tag-pill {
+    display: block;
+    margin: auto;
+    width: 10%;
+    margin-top: 20px;
+}
+
+.wrapper {
+    margin-top: 15px;
+}

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/style.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+                    <a class="navbar-brand" href="/">PCD Cloud Storage</a>
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/files">My Files</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/addFiles">Upload</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="center">
+            <div>
+                <img class="banner" src="/{{email}}/{{filename}}"></img>
+                {{#if isFree}}
+                    <figcaption><span class="tag tag-pill tag-success">Free</span></figcaption>
+                {{/if}}
+
+                {{#unless isFree}}
+                    <figcaption><span class="tag tag-pill tag-warning">Paid</span></figcaption>
+                {{/unless}}
+            </div>
+        </div>
+    </body>
+</html>
