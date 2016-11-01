@@ -5,3 +5,4 @@ target
 "node_modules/\nbower_components/"
 appCredentials.js
 node_modules/*
+uploads/*
