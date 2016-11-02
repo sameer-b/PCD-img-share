@@ -7,9 +7,6 @@
     <body>
         <nav class="navbar navbar-dark bg-inverse">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-toggleable-md" id="navbarResponsive">
                     <a class="navbar-brand" href="/">PCD ImgShare</a>
                     <ul class="nav navbar-nav">
@@ -23,7 +20,7 @@
         </nav>
 
         <div class="center">
-            <div>
+                <h3 class="center-heading">{{originalname}}</h3>
                 <img class="banner" src="/{{email}}/{{filename}}"></img>
                 {{#if isFree}}
                     <figcaption><span class="tag tag-pill tag-success">Free</span></figcaption>
@@ -32,7 +29,6 @@
                 {{#unless isFree}}
                     <figcaption><span class="tag tag-pill tag-warning">Paid</span></figcaption>
                 {{/unless}}
-            </div>
         </div>
     </body>
 </html>

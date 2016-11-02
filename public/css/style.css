@@ -1,7 +1,5 @@
 .thumbnail-image {
-    width: 200px;
     height: 200px;
-    margin: 10px;
 }
 
 .center {
@@ -23,4 +21,10 @@
 
 .wrapper {
     margin-top: 15px;
+}
+
+.center-heading {
+    text-align: center;
+    width: 80%;
+    margin: auto;
 }
